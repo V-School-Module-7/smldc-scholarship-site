@@ -1,2 +1,1 @@
-# smldc-scholarship-site
-# smldc-scholarship-site
+gatsby site. pulls data from prismic using graphql
