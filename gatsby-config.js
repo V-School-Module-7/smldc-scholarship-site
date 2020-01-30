@@ -8,7 +8,8 @@ module.exports = {
         repositoryName: 'smldc-website',
         accessToken: `${process.env.PRISMIC_TOKEN}`,
         schemas: {
-          testType: require('./src/json-schemas/testType.json')
+          testType: require('./src/json-schemas/testType.json'),
+          boardmember: require('./src/json-schemas/boardmember.json')
         }
       }
     }
