@@ -1,5 +1,6 @@
 import React from'react'
 import Footer from '../components/footer'
+import formStyles from '../styles/form.module.css'
 
 
 export default props => {
@@ -27,70 +28,43 @@ export default props => {
     
     return (
         <>
-            {/* yes, the styling is inline. Feel free to change this */}
             <h1>Contact Us</h1>
             <form onSubmit={handleSubmit}
-                style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1fr 1fr'
-                }}
+                  className={formStyles.form}  
             >
                 <div>
                     <label htmlFor='name' >Name</label><br/>
-                    <input style={{
-                                width: '80%'
-                            }}
+                    <input  className={formStyles.input}
                             name='name' ref={refs.name} required={true} type='text'></input>
                 </div>
                 <div>
                     <label htmlFor='email'>Email</label><br/>
-                    <input style={{
-                                width: '80%'
-                            }}
+                    <input  className={formStyles.input}
                             name='email' ref={refs.email} required={true} type='text'></input>
                 </div>
                 <div>
                     <label htmlFor='phone'>Phone</label><br/>
-                    <input style={{
-                                width: '80%'
-                            }}
+                    <input  className={formStyles.input}
                             name='phone' ref={refs.phone} type='text'></input>
                 </div>
                 <div>
                     <label htmlFor='subject'>Subject</label><br/>
-                    <input style={{
-                                width: '80%'
-                            }}
+                    <input  className={formStyles.input}
                             name='subject' ref={refs.subject} type='text'></input>
                 </div>
                 <div
-                    style={{
-                        gridColumnStart:'1',
-                        gridColumnEnd:'-1',
-                        textAlign: 'center'
-                    }}
+                   className={formStyles.inputLarge}
                 >
-                    <label htmlFor='message'
-                        style={{
-                            width: '80%',
-                            textAlign: 'center'
-                        }}
+                    <label  htmlFor='message'
+                            className={formStyles.input}
                     >Message</label><br/>
                     <textarea 
-                    style={{
-                        width: '80%',
-                        height: '10em'
-                    }}
-                    name='message' ref={refs.message} required={true}></textarea>
+                        className={formStyles.textarea}
+                        name='message' ref={refs.message} required={true}>
+                    </textarea>
                 </div>
                 <div 
-                    style={{
-                        gridColumnStart:'1',
-                        gridColumnEnd:'-1',
-                        width: '30%',
-                        textAlign: 'center',
-                        margin: 'auto'
-                    }}
+                    className={formStyles.submitContainer}
                     type='submit'
                 ><button>Submit</button></div>
             </form>

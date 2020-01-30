@@ -1,0 +1,25 @@
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.input {
+    width: 80%;
+}
+
+.input-large {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.textarea {
+    width: 80%
+}
+
+.submit-container {
+    grid-column: 1 / -1;
+    width: 30%;
+    text-align: center;
+    margin: auto; 
+}
