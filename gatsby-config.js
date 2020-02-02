@@ -8,7 +8,8 @@ module.exports = {
         repositoryName: 'smldc-website',
         accessToken: `${process.env.PRISMIC_TOKEN}`,
         schemas: {
-          testtype: require('./src/json-schemas/testtype.json')
+          testType: require('./src/prismic-schemas/testType.json'),
+          header: require('./src/prismic-schemas/header.json')
         }
       }
     }
