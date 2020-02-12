@@ -12,7 +12,7 @@ export default props => {
             <img className={cardStyles.headshot} src={data.headshot.url}></img>
             <div className={cardStyles.name}>{data.name.text}</div>
         </div>
-        {data.body.map(sliceArr => <SliceRenderer slices={sliceArr.items}/>)}    
+        <SliceRenderer slices={data.body}/>
         </>
     )
 }
@@ -30,6 +30,19 @@ query MyTastyArticle($id: String!){
             url
           }
           body {
+            ... on PrismicRecipientBodyRichTextParagraph {
+              slice_type
+              items {
+                paragraph {
+                  text
+                  html
+                  raw {
+                    text
+                    type
+                  }
+                }
+              }
+            }
             ... on PrismicRecipientBodyImageParagraph {
               slice_type
               items {
@@ -52,6 +65,7 @@ query MyTastyArticle($id: String!){
               }
             }
           }
+          
         }
     }
 }

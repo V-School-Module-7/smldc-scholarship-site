@@ -9,7 +9,6 @@ export default props => {
     return (
         <>
         <div>
-            Hey
             <p>
             {image && (
                 <img    src={image.url} 
