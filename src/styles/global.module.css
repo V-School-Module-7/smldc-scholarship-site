@@ -1,5 +1,11 @@
-.title {
-    font-size: 48pt;
-    text-align: center;
-    margin: auto;
+
+.section-title{
+    font-size: 42pt;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    color: rgb(168, 179, 144);
+    border-bottom: 2px solid rgb(168, 179, 144);
+    margin: 20px;
+
 }
