@@ -9,7 +9,7 @@ module.exports = {
         accessToken: `${process.env.PRISMIC_TOKEN}`,
         schemas: {
           testtype: require('./src/prismic-schemas/testtype.json'),
-          footer: require('./src/prismic-schemas/footer.json')
+          footer: require('./src/prismic-schemas/footer.json'),
           boardmember: require('./src/json-schemas/boardmember.json')
         }
       }
