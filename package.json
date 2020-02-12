@@ -14,7 +14,6 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
     "gatsby": "^2.18.12",
     "gatsby-source-prismic": "^2.3.0-alpha.3",
     "gatsby-source-prismic-graphql": "^3.3.1",
@@ -24,6 +23,7 @@
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "prettier": "^1.19.1"
   },
   "repository": {
