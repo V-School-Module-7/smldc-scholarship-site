@@ -1,15 +1,16 @@
 import React from 'react'
+import {graphql} from 'gatsby'
 import cardStyles from '../styles/personCard.module.css'
 const {recipientDetailsInternal} = require('../fragments/index.js')
 
 export default props => {
-    const data = props.data
+    const data = props.data.prismicRecipient.data
+    console.log(data)
     return (
         <>
-        <div className={cardStyles.card} {...props}>
-            <img className={cardStyles.headshot} src={props.data.headshot.url}></img>
-            <div className={cardStyles.name}>{props.data.name.text}</div>
-            <div className={cardStyles.sub}>{props.data.position.text}</div>
+        <div className={cardStyles.card} >
+            <img className={cardStyles.headshot} src={data.headshot.url}></img>
+            <div className={cardStyles.name}>{data.name.text}</div>
         </div>    
         </>
     )
