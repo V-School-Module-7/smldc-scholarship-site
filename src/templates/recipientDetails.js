@@ -1,7 +1,7 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import cardStyles from '../styles/personCard.module.css'
-const {recipientDetailsInternal} = require('../fragments/index.js')
+import SliceRenderer from '../components/slices/index.js'
 
 export default props => {
     const data = props.data.prismicRecipient.data
@@ -11,7 +11,8 @@ export default props => {
         <div className={cardStyles.card} >
             <img className={cardStyles.headshot} src={data.headshot.url}></img>
             <div className={cardStyles.name}>{data.name.text}</div>
-        </div>    
+        </div>
+        {data.body.map(sliceArr => <SliceRenderer slices={sliceArr.items}/>)}    
         </>
     )
 }
@@ -28,8 +29,28 @@ query MyTastyArticle($id: String!){
           headshot {
             url
           }
-          about {
-            url
+          body {
+            ... on PrismicRecipientBodyImageParagraph {
+              slice_type
+              items {
+                float_right
+                image {
+                  url
+                  dimensions {
+                    height
+                    width
+                  }
+                }
+                paragraph {
+                  html
+                  text
+                  raw {
+                    text
+                    type
+                  }
+                }
+              }
+            }
           }
         }
     }

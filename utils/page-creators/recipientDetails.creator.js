@@ -21,9 +21,6 @@ const createRecipientDetails = async (graphql, actions) => {
                         headshot {
                           url
                         }
-                        about {
-                          url
-                        }
                       }
                     }
                 }
