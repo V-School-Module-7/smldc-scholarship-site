@@ -10,6 +10,7 @@ module.exports = {
         schemas: {
           testtype: require('./src/prismic-schemas/testtype.json'),
           footer: require('./src/prismic-schemas/footer.json'),
+          boardmember: require('./src/prismic-schemas/boardmember.json'),
           recipients: require('./src/json-schemas/recipient.json')
         }
       }
