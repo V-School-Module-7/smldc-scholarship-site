@@ -1,0 +1,38 @@
+{
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "uid"
+        }
+      },
+      "name": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1",
+          "label": "name"
+        }
+      },
+      "headshot": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "headshot"
+        }
+      },
+      "year_received": {
+        "type": "Number",
+        "config": {
+          "label": "Year Received"
+        }
+      },
+      "about": {
+        "type": "Link",
+        "config": {
+          "allowTargetBlank": true,
+          "label": "About"
+        }
+      }
+    }
+  }
