@@ -55,11 +55,15 @@ query MyTastyArticle($id: String!){
                   }
                 }
                 paragraph {
-                  html
                   text
                   raw {
                     text
                     type
+                    spans {
+                      end
+                      start
+                      type
+                    }
                   }
                 }
               }

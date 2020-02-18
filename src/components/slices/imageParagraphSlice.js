@@ -1,15 +1,14 @@
 import React from 'react'
-import {RichText} from 'prismic-reactjs'
-import linkResolver from '../../linkResolver.js'
+import HandleRichText from '../HandleRichText.js'
 
 export default props => {
+    console.log('imageParagraphSlice.js')
     console.log(props)
     const slice = props.slice
     const {paragraph, image, float_right} = slice
     return (
         <>
         <div>
-            <p>
             {image && (
                 <img    src={image.url} 
                         style={{
@@ -18,8 +17,7 @@ export default props => {
                         }}
                 />
             )}
-            {paragraph.text}
-            </p>
+            <HandleRichText richText={paragraph}/>
         </div>
         </>
     )
