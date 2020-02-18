@@ -2,6 +2,7 @@ import React from 'react'
 import RecipientYear from '../components/recipientYear.js'
 import {graphql} from 'gatsby'
 import globalStyles from '../styles/global.module.css'
+import Footer from '../components/footer.js'
 
 export default props => {
     const data = props.data.allPrismicRecipient.edges.map(edge => edge.node.data)
@@ -35,9 +36,6 @@ query RecipientQuery {
               text
             }
             headshot {
-              url
-            }
-            about {
               url
             }
           }
