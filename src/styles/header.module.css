@@ -1,0 +1,10 @@
+.headerContainer{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.links{
+    font-size: medium;
+    
+}
