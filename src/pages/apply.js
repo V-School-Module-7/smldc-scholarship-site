@@ -1,5 +1,6 @@
 import React from'react'
 import {useStaticQuery, graphql} from 'gatsby'
+import Layout from '../components/layout.js'
 
 
     export default () => {
@@ -41,7 +42,9 @@ import {useStaticQuery, graphql} from 'gatsby'
         }
 
         return (
+            <Layout>
             <div>
+                
                 <h1>{data.title.text}</h1>
                 <h3>{data.deadline.text}</h3>
                 <ul>
@@ -52,8 +55,10 @@ import {useStaticQuery, graphql} from 'gatsby'
                     <li>{data.criteria_item5.text}</li>
                 </ul>
                 <h3>{data.criteria.text}</h3> 
-                 
+                
             </div>
+            </Layout>
+            
         )
         
     }
