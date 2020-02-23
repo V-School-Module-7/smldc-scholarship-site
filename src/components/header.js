@@ -40,6 +40,18 @@ export default () => {
             title6 {
               html
               text
+            },
+            title7 {
+              html
+              text
+            },
+            title8 {
+              html
+              text
+            },
+            title9 {
+              html
+              text
             }
           }
         }
@@ -54,11 +66,15 @@ export default () => {
         <ul className={headerStyles.headerContainer}>
           <img height='30vh' alt='' src={data.logo.url}/>
             <Link to="/">{data.title1.text}</Link>
-            <li className={headerStyles.links}>{data.title2.text}</li>
-            <li className={headerStyles.links}>{data.title3.text}</li>
-            <li className={headerStyles.links}>{data.title4.text}</li>
-            <li className={headerStyles.links}>{data.title5.text}</li>
-            <li className={headerStyles.links}>{data.title6.text}</li>
+            <Link to='/recipients' className={headerStyles.links}>{data.title4.text}</Link>
+            <Link to='/apply' className={headerStyles.links}>{data.title5.text}</Link>
+            <Link to='/donate' className={headerStyles.links}>{data.title6.text}</Link>
+            <Link to='/donor-levels' className={headerStyles.links}>{data.title3.text}</Link>
+            <Link to='/events' className={headerStyles.links}>{data.title7.text}</Link>
+            <Link to='/board' className={headerStyles.links}>{data.title8.text}</Link>
+            <Link to='/contact' className={headerStyles.links}>{data.title9.text}</Link>
+
+
         </ul>
     );
 };

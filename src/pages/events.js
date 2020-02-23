@@ -2,6 +2,7 @@ import React from 'react'
 import {EventCardSmall, EventCardLarge} from '../components/events/index.js'
 import {graphql} from 'gatsby'
 import PrismicDOM from 'prismic-dom'
+import Layout from "../components/layout"
 
 export default props => {
     console.log('events props')
@@ -26,14 +27,14 @@ export default props => {
     //past events are rendered small
 
     return (
-        <>
+        <Layout>
             <div>
                 {largeEvents.map((e, i) => <EventCardLarge key={i+'bigE'} event={e}/>)}
             </div>
             <div>
                 {smallEvents.map((e, i) => <EventCardSmall key={i+'smallE'} event={e}/>)}
             </div>
-        </>
+        </Layout>
     )
 }
 

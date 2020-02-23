@@ -3,6 +3,7 @@ import Footer from '../components/footer.js'
 import {graphql} from 'gatsby'
 import SliceRenderer from '../components/slices/index.js'
 import globalStyles from '../styles/global.module.css'
+import Layout from '../components/layout'
 
 export default props => {
 
@@ -10,13 +11,12 @@ export default props => {
     console.log(data.body)
 
     return (
-        <>
+        <Layout>
             <div>
                 <h1>{data.title.text}</h1>
                 <SliceRenderer slices={data.body}/>
             </div>
-            <Footer/>
-        </>
+        </Layout>
     )
 }
 
