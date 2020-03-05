@@ -3,9 +3,7 @@ const path = require('path')
 
 const createRecipientDetails = async (graphql, actions) => {
     const {createPage} = actions
-    console.log('creating!')
-
-    const recipientDetailsTemplate = path.resolve('./src/templates/recipientDetails.js')
+    const recipientDetailsTemplate = path.resolve('./src/templates/eventDetails.js')
     const pages = await graphql(`
         {
             allPrismicRecipient {
