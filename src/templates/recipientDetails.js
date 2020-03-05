@@ -18,7 +18,7 @@ export default props => {
 }
 
 export const pageQuery = graphql`
-query MyTastyArticle($id: String!){
+query MyArticle($id: String!){
     prismicRecipient(id: {eq: $id}) {
         uid
         data {

@@ -14,7 +14,6 @@ export default props => {
          <div
             className={cardStyles.name}
          >{props.name.text}</div>
-         <a href={props.about.url}>About</a>
         </div>
     )
 }
