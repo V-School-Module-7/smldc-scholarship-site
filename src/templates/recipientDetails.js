@@ -2,18 +2,19 @@ import React from 'react'
 import {graphql} from 'gatsby'
 import cardStyles from '../styles/personCard.module.css'
 import SliceRenderer from '../components/slices/index.js'
+import Layout from '../components/layout'
 
 export default props => {
     const data = props.data.prismicRecipient.data
     console.log(data)
     return (
-        <>
-        <div className={cardStyles.card} >
-            <img className={cardStyles.headshot} src={data.headshot.url}></img>
-            <div className={cardStyles.name}>{data.name.text}</div>
-        </div>
-        <SliceRenderer slices={data.body}/>
-        </>
+        <Layout>
+          <div className={cardStyles.card} >
+              <img className={cardStyles.headshot} src={data.headshot.url}></img>
+              <div className={cardStyles.name}>{data.name.text}</div>
+          </div>
+          <SliceRenderer slices={data.body}/>
+        </Layout>
     )
 }
 

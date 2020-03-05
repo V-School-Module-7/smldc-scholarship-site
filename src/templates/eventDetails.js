@@ -1,7 +1,6 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import cardStyles from '../styles/personCard.module.css'
-import SliceRenderer from '../components/slices/index.js'
+import Layout from '../components/layout'
 
 export default props => {
     const data = props.data.prismicEvent.data
@@ -9,17 +8,19 @@ export default props => {
     console.log(data.event_name)
     return (
         <>
-            <h1>{data.event_name.text}</h1>
-            <img
-                style={{
-                    float: 'left'
-                }}
-                src={data.main_image.url}
-                alt={data.main_image.alt}
-            >
-                
-            </img>
-            <p>{data.main_info.text}</p>
+            <Layout>
+                <h1>{data.event_name.text}</h1>
+                <img
+                    style={{
+                        float: 'left'
+                    }}
+                    src={data.main_image.url}
+                    alt={data.main_image.alt}
+                >
+                    
+                </img>
+                <p>{data.main_info.text}</p>
+            </Layout>
         </>
     )
 }
@@ -54,6 +55,3 @@ query MyEvent($id: String!){
     }
 }
 `
-
-
-          
