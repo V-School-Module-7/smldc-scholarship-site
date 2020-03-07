@@ -10,6 +10,7 @@ const createEventDetails = async (graphql, actions) => {
                 node {
                   id
                   uid
+                  slugs
                   data {
                     cta_button_text
                     date
@@ -40,13 +41,11 @@ const createEventDetails = async (graphql, actions) => {
     `)
 
     pages.data.allPrismicEvent.edges.forEach(edge => {
-        const {event_name} = edge.node.data
-        const {uid} = edge.node
-
-        const pageId = `${event_name.text}_${uid}`
-        console.log('creating page!: ', pageId)
+        const {slugs} = edge.node
+        const pageID = `${slugs[0]}`
+        
         createPage({
-            path: `/events/${pageId}`,
+            path: `/events/${pageID}`,
             component: eventDetailsTemplate,
             context: {
               id: edge.node.id,
