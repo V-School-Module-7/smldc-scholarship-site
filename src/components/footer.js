@@ -1,5 +1,6 @@
 import React from 'react'
 import {useStaticQuery, graphql} from 'gatsby'
+import footerStyles from '../styles/footer.module.css'
 
 
 export default props => {
@@ -18,7 +19,9 @@ export default props => {
     const data = _data.prismicFooter.data //so we don't have to type query.data.field.data.query.data.thing.text.otherthing
     
     return (
-        <footer>
+        <footer
+            className={footerStyles.footer}
+        >
             <p>{data.footerText.text}</p>
         </footer>
     )
