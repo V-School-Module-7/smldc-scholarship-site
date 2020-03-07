@@ -10,7 +10,6 @@ export default props => {
     return (
         <>
         <div
-            className={globalStyles.container}
         >
             {image && (
                 <img    src={image.url} 

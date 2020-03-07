@@ -11,7 +11,6 @@ export default props => {
     return (
         <>
         <div
-            className={globalStyles.container}
         >
             <hr/>
             <HandleRichText richText={paragraph}/>
