@@ -17,11 +17,13 @@ export default props => {
     }
 
     return (
-        <>
+        <div
+          className={globalStyles.container}
+        >
             <div className={globalStyles.title}>Recipients</div>
             {yearsArray.map(year => <RecipientYear yearNumber={year.number} recipients={year.year} />)}
             <Footer/>
-        </>
+        </div>
     )
 }
 

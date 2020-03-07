@@ -3,6 +3,8 @@ import {EventCardSmall, EventCardLarge} from '../components/events/index.js'
 import {graphql} from 'gatsby'
 import PrismicDOM from 'prismic-dom'
 import Layout from "../components/layout"
+import globalStyles from '../styles/global.module.css'
+
 
 export default props => {
     console.log('events props')
@@ -28,12 +30,17 @@ export default props => {
 
     return (
         <Layout>
+          <div
+            className={globalStyles.container}
+          >
             <div>
                 {largeEvents.map((e, i) => <EventCardLarge key={i+'bigE'} event={e}/>)}
             </div>
             <div>
                 {smallEvents.map((e, i) => <EventCardSmall key={i+'smallE'} event={e}/>)}
             </div>
+          </div>
+            
         </Layout>
     )
 }

@@ -2,6 +2,7 @@ import React from'react'
 import Footer from '../components/footer'
 import formStyles from '../styles/form.module.css'
 import Layout from '../components/layout'
+import globalStyles from '../styles/global.module.css'
 
 
 export default props => {
@@ -30,6 +31,9 @@ export default props => {
     return (
         <Layout>
             <h1>Contact Us</h1>
+            <div
+                className={globalStyles.container}
+            >
             <form onSubmit={handleSubmit}
                   className={formStyles.form}  
             >
@@ -81,6 +85,7 @@ export default props => {
                     SLC UT 84157
                 </div>
             </div>
+        </div>
         </Layout>
     )
 }

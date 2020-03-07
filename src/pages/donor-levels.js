@@ -12,8 +12,12 @@ export default props => {
 
     return (
         <Layout>
-            <div>
-                <h1>{data.title.text}</h1>
+            <div
+              className={globalStyles.container}
+            >
+                <h1
+                  className={globalStyles.headerTitle}
+                >{data.title.text}</h1>
                 <SliceRenderer slices={data.body}/>
             </div>
         </Layout>

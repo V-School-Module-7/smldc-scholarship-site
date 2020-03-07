@@ -64,8 +64,7 @@ export default () => {
 
     return (
         <ul className={headerStyles.headerContainer}>
-          <img height='30vh' alt='' src={data.logo.url}/>
-            <Link to="/">{data.title1.text}</Link>
+            <Link to="/"><img height='30vh' alt='' src={data.logo.url}/></Link>
             <Link to='/recipients' className={headerStyles.links}>{data.title4.text}</Link>
             <Link to='/apply' className={headerStyles.links}>{data.title5.text}</Link>
             <Link to='/donate' className={headerStyles.links}>{data.title6.text}</Link>
