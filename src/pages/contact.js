@@ -30,7 +30,11 @@ export default props => {
     
     return (
         <Layout>
-            <h1>Contact Us</h1>
+            <h1 
+                className={globalStyles.title} 
+            >
+                Contact Us
+            </h1>
             <div
                 className={globalStyles.container}
             >
