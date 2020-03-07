@@ -6,9 +6,9 @@ export default props => {
     return (
         <>
         <div className={cardStyles.card} {...props}>
-            <img className={cardStyles.headshot} src={props.data.headshot.url}></img>
-            <div className={cardStyles.name}>{props.data.name.text}</div>
-            <div className={cardStyles.sub}>{props.data.position.text}</div>
+            <img className={cardStyles.headshot} src={props.headshot.url}></img>
+            <div className={cardStyles.name}>{props.name}</div>
+            <div className={cardStyles.sub}>{props.position}</div>
         </div>    
         </>
     )

@@ -2,6 +2,7 @@ import React from 'react'
 import BoardMember from '../components/boardMember.js'
 import {graphql} from 'gatsby'
 import globalStyles from '../styles/global.module.css'
+import cardStyles from '../styles/personCard.module.css'
 import Layout from '../components/layout'
 import SliceRenderer from '../components/slices/index.js'
 
@@ -10,10 +11,12 @@ export default props => {
     return (
         <Layout>
             <div className={globalStyles.title}>Board of Directors</div>
-            <div>   
+            <div
+              className={cardStyles.cardContainer}
+            >   
                 {board_members.map(datum => <BoardMember {...datum}/>)}
             </div>
-            <SliceRenderer slices={data.body}/>
+            <SliceRenderer slices={body}/>
         </Layout>
     )
 }
@@ -30,6 +33,7 @@ export const pageQuery = graphql`
           position
         }
         body {
+          slice_type
           items {
             float_right
             image {

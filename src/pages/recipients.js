@@ -10,7 +10,7 @@ export default props => {
     let currentYear = new Date().getFullYear()
     let firstYear = 2007
     const yearsArray = []
-    for(let i = currentYear + 1; i > firstYear; i--){
+    for(let i = currentYear + 2; i > firstYear; i--){
         let year = data.filter(datum => datum.year_received == i)
         if(year.length > 0)
             yearsArray.push({number: i, year})
@@ -19,7 +19,11 @@ export default props => {
     return (
         <>
             <div className={globalStyles.title}>Recipients</div>
-            {yearsArray.map(year => <RecipientYear yearNumber={year.number} recipients={year.year} />)}
+            {yearsArray.map(year => {
+                return (
+                  <RecipientYear yearNumber={year.number} recipients={year.year} />
+                )
+              })}
             <Footer/>
         </>
     )

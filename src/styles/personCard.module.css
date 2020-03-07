@@ -1,8 +1,12 @@
 .card {
     width: 200px;
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     align-items: center;
+}
+
+.cardContainer{
+    
 }
 
 .headshot {
