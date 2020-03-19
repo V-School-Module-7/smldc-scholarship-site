@@ -1,6 +1,7 @@
 import React from'react'
 import {useStaticQuery, graphql} from 'gatsby'
 import Layout from '../components/layout.js'
+import globalStyles from '../styles/global.module.css'
 
 
     export default () => {
@@ -43,7 +44,9 @@ import Layout from '../components/layout.js'
 
         return (
             <Layout>
-            <div>
+            <div
+              className={globalStyles.container}
+            >
                 
                 <h1>{data.title.text}</h1>
                 <h3>{data.deadline.text}</h3>

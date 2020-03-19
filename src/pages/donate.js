@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import globalStyles from '../styles/global.module.css'
 
 export default () => {
 
@@ -49,6 +50,9 @@ export default () => {
     let data = _data.allPrismicDonate.nodes[0].data
     return (
         <Layout>
+          <div
+            className={globalStyles.container}
+          >
             <h1>{data.title.text}</h1>
             <p>{data.about_contributions.text}</p>
 
@@ -69,6 +73,7 @@ export default () => {
             {data.donation_amount} */}
             <h3>{data.wire_transfer.text}</h3>
             <p>{data.wire_transfer_text.text}</p>
+          </div>
         </Layout>
     );
 };

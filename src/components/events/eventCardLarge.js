@@ -12,6 +12,7 @@ export default props => {
                 style={{
                     float:'left',
                     maxWidth: '200px',
+                    padding: '20px'
                 }}
             />
             <h1>{event_name.text}</h1>

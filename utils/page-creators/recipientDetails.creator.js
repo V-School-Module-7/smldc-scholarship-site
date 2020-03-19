@@ -11,6 +11,7 @@ const createRecipientDetails = async (graphql, actions) => {
                     node {
                       id
                       uid
+                      slugs
                       data {
                         year_received
                         name {
@@ -27,13 +28,11 @@ const createRecipientDetails = async (graphql, actions) => {
     `)
 
     pages.data.allPrismicRecipient.edges.forEach(edge => {
-        const {year_received, name, headshot} = edge.node.data
-        const {uid} = edge.node
-
-        const pageId = `${name.text}_${uid}`
-        console.log('making page:', pageId)
+        const {slugs} = edge.node
+        const pageID = `${slugs[0]}`
+        
         createPage({
-            path: `/recipients/${pageId}`,
+            path: `/recipients/${pageID}`,
             component: recipientDetailsTemplate,
             context: {
               id: edge.node.id,

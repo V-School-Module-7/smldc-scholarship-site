@@ -17,6 +17,7 @@ export default props => {
                 alt={main_image.alt} 
                 style={{
                     maxWidth: '200px',
+                    padding: '10px',
                 }}
             />
             <h1>{event_name.text}</h1>
