@@ -2,7 +2,7 @@ import React from 'react'
 import RecipientYear from '../components/recipientYear.js'
 import {graphql} from 'gatsby'
 import globalStyles from '../styles/global.module.css'
-import Footer from '../components/footer.js'
+import Layout from '../components/layout'
 
 export default props => {
     const data = props.data.allPrismicRecipient.edges.map(edge => edge.node.data)
@@ -17,13 +17,12 @@ export default props => {
     }
 
     return (
-        <div
-          className={globalStyles.container}
-        >
+        <>
+          <Layout>
             <div className={globalStyles.title}>Recipients</div>
             {yearsArray.map(year => <RecipientYear yearNumber={year.number} recipients={year.year} />)}
-            <Footer/>
-        </div>
+          </Layout>
+        </>
     )
 }
 
